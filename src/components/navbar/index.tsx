@@ -21,10 +21,10 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
       <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
-            {/*Left*/}
+            {/* Left */}
             <img src={Logo} alt="logo" />
 
-            {/*Right */}
+            {/* Right */}
             {isAboveMediumScreen ? (
               <div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm`}>
@@ -67,6 +67,18 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Modal */}
+      {!isAboveMediumScreen && isMenuToggle && (
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+          {/* Close Icon */}
+          <div className="flex justify-end p-12">
+            <button onClick={() => setIsMenuToggle(!isMenuToggle)}>
+              <XMarkIcon className="h-6 w-6 text-gray-400" />
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
