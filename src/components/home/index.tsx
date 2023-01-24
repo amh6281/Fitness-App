@@ -21,19 +21,19 @@ const Home = ({ setSelectedPage }: Props) => {
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         <div className="z-10 mt-32 md:basis-3/5">
           <div className="md:-mt-20">
-            <div>
-              <div>
+            <div className="relative">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                 <img alt="home-page-text" src={HomePageText} />
               </div>
             </div>
-            <p>
+            <p className="mt-8 text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
               delectus, exercitationem minima nostrum quibusdam commodi culpa
               magni voluptas corporis adipisci! Earum tempore incidunt neque
               molestiae reiciendis corporis, eum praesentium est.
             </p>
           </div>
-          <div>
+          <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
@@ -46,14 +46,14 @@ const Home = ({ setSelectedPage }: Props) => {
             </AnchorLink>
           </div>
         </div>
-        <div>
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
       </div>
       {isAboveMediumScreen && (
-        <div>
-          <div>
-            <div>
+        <div className="h-[150px] w-full bg-primary-100 py-10">
+          <div className="mx-auto w-5/6">
+            <div className="flex w-3/5 items-center justify-between gap-8">
               <img alt="redbull-sponsor" src={SponsorRedBull} />
               <img alt="forbes-sponsor" src={SponsorForbes} />
               <img alt="fortune-sponsor" src={SponsorFortune} />
