@@ -30,6 +30,13 @@ const benefits: Array<BenefitType> = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
@@ -39,7 +46,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
     <section id="benefit" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
         {/* Header */}
-        <div className="md:my-5 md:w-3/5">
+        <motion.div
+          className="md:my-5 md:w-3/5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <Text>EvoGYM</Text>
           <p className="my-5 text-sm">
             저희 헬스장은 세계적인 피트니스 장비, 트레이너 및 PT를 제공합니다.
@@ -47,10 +64,16 @@ const Benefits = ({ setSelectedPage }: Props) => {
             건강, 체력, 체형, 능력에 맞게 측정하여 운동 강도와 빈도를
             설정합니다.
           </p>
-        </div>
+        </motion.div>
 
         {/* Benefits */}
-        <div className="mt-5 items-center justify-between gap-8 md:flex">
+        <motion.div
+          className="mt-5 items-center justify-between gap-8 md:flex"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {benefits.map((benefit: BenefitType) => (
             <Benefit
               key={benefit.title}
@@ -60,7 +83,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
