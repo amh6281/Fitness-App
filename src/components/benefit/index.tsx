@@ -8,6 +8,8 @@ import { BenefitType, SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Text from "@/shared/Text";
 import Benefit from "./Benefit";
+import ActionButton from "../actionButton/ActionButton";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 
 const benefits: Array<BenefitType> = [
   {
@@ -84,6 +86,73 @@ const Benefits = ({ setSelectedPage }: Props) => {
             />
           ))}
         </motion.div>
+
+        {/* Graphic and Description */}
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+          {/* Graphic */}
+          <img
+            className="mx-auto"
+            alt="benefit-page-graphic"
+            src={BenefitsPageGraphic}
+          />
+
+          {/* Description */}
+          <div>
+            {/* Title */}
+            <div className="relative">
+              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                >
+                  <Text>
+                    수많은 회원에게 최고의 시설을 제공하는{" "}
+                    <span className="text-primary-500">센터</span>
+                  </Text>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Descript */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <p className="my-5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
+                provident ea suscipit neque magnam, amet nihil eum consectetur
+                accusamus architecto. Eos quod magnam doloribus facere omnis
+                molestias dolorum, numquam necessitatibus.
+              </p>
+              <p className="mb-5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+                voluptatem architecto enim labore delectus dolorum est?
+                Doloribus expedita at quibusdam voluptate vel hic beatae, dicta,
+                eum voluptas, nam sapiente alias.
+              </p>
+            </motion.div>
+
+            {/* Button */}
+            <div className="relative mt-16">
+              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles"></div>
+              <ActionButton setSelectedPage={setSelectedPage}>
+                가입하기
+              </ActionButton>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );
