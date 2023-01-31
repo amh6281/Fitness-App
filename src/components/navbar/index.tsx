@@ -4,7 +4,7 @@ import Logo from "../../assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "../actionButton/ActionButton";
+import ActionButton from "../../shared/ActionButton";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -43,7 +43,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
-                    page="Class"
+                    page="Classes"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
@@ -94,7 +94,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Class"
+              page="Classes"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
