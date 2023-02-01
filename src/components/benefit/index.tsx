@@ -59,7 +59,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Text>EvoGYM</Text>
+          <Text>EVOGYM</Text>
           <p className="my-5 text-sm">
             저희 헬스장은 세계적인 피트니스 장비, 트레이너 및 PT를 제공합니다.
             스포츠 의학전공 및 전문자격증을 보유한 퍼스널 트레이너가 운동 목적,
@@ -131,22 +131,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="my-5">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-                provident ea suscipit neque magnam, amet nihil eum consectetur
-                accusamus architecto. Eos quod magnam doloribus facere omnis
-                molestias dolorum, numquam necessitatibus.
-              </p>
-              <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
-                voluptatem architecto enim labore delectus dolorum est?
-                Doloribus expedita at quibusdam voluptate vel hic beatae, dicta,
-                eum voluptas, nam sapiente alias.
+                골프 맛집! 쇠질 맛집! 인증샷 맛집! 운동맛집 EVOGYM이
+                상륙했습니다! 뉴텍기반의 머신, 스텝밀 보유, 러닝10대, 사이클4대
+                여성전용스트레칭 zone과 필라테스1:1 private 룸까지!! 게다가 시설
+                어느 곳을 가도 포토존이 한 가득! 이제 EVOGYM과 함께 운동도
+                즐기고 오운완 인증도 마음껏 즐겨보세요💪
               </p>
             </motion.div>
 
             {/* Button */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles"></div>
+              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1]  before:content-sparkles"></div>
               <ActionButton setSelectedPage={setSelectedPage}>
                 가입하기
               </ActionButton>
