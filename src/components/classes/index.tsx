@@ -12,33 +12,36 @@ import Class from "./Class";
 
 const classes: Array<ClassType> = [
   {
-    name: "Weight Training Classes",
-    description: "asdasdasdasdasdasddasdasdas",
+    name: "웨이트 트레이닝 수업",
+    description: "근력 운동을 통한 근육과 원하는 몸매를 가질 수 있습니다.",
     image: image1,
   },
   {
-    name: "Weight Training Classes",
-    description: "asdasdasdasdasdasddasdasdas",
+    name: "요가 수업",
+    description: "요가를 통한 유연성 및 체지방 감소를 한번에 잡을 수 있습니다.",
     image: image2,
   },
   {
-    name: "Weight Training Classes",
-    description: "asdasdasdasdasdasddasdasdas",
+    name: "코어 수업",
+    description:
+      "인간의 몸에 핵심인 코어 운동을 통해 균형있는 체형을 만들 수 있습니다.",
     image: image3,
   },
   {
-    name: "Weight Training Classes",
-    description: "asdasdasdasdasdasddasdasdas",
+    name: "필라테스 수업",
+    description: "점진적 체중 감소 및 유연성, 균육을 강화할 수 있습니다.",
     image: image4,
   },
   {
-    name: "Weight Training Classes",
-    description: "asdasdasdasdasdasddasdasdas",
+    name: "2인 트레이닝 수업",
+    description:
+      "혼자가 아닌, 2인 동반 트레이닝을 통해 재미와 몸매 두마리 토끼를 잡을 수 있습니다.",
     image: image5,
   },
   {
-    name: "Weight Training Classes",
-    description: "asdasdasdasdasdasddasdasdas",
+    name: "홈 트레이닝 수업",
+    description:
+      "별다른 기구없이, 집에서 혼자 근육 증가와 체지방 감소를 할 수 있습니다.",
     image: image6,
   },
 ];
