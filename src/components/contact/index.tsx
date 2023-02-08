@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Contact = ({ setSelectedPage }: Props) => {
-  const inputStyle = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
+  const inputStyle = `mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   const {
     register,
@@ -68,7 +68,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
-              action="https://formsubmit.co/your@email.com"
+              action="https://formsubmit.co/amh6281@naver.com"
             >
               <input
                 className={inputStyle}
@@ -102,9 +102,10 @@ const Contact = ({ setSelectedPage }: Props) => {
                   {errors.email.type === "pattern" && "Invalid email address."}
                 </p>
               )}
-              <input
+              <textarea
                 className={inputStyle}
-                type="text"
+                rows={4}
+                cols={50}
                 placeholder="문의내용"
                 {...register("message", {
                   required: true,
@@ -119,6 +120,13 @@ const Contact = ({ setSelectedPage }: Props) => {
                     "Max length is 2000 char."}
                 </p>
               )}
+
+              <button
+                type="submit"
+                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+              >
+                보내기
+              </button>
             </form>
           </motion.div>
         </div>
