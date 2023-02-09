@@ -41,13 +41,11 @@ const Contact = ({ setSelectedPage }: Props) => {
           }}
         >
           <Text>
-            <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+            지금 바로 <span className="text-primary-500">문의하기</span>
           </Text>
           <p className="my-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, ex
-            soluta? Facere quia perspiciatis quos adipisci a necessitatibus,
-            optio cumque itaque fugit doloremque odit consectetur iure iusto,
-            officia numquam repudiandae.
+            이름과 이메일을 양식에 맞춰 입력하고, 문의하실 내용을 입력하여
+            보내주시면 이른 시일 내에 답변을 드리겠습니다.
           </p>
         </motion.div>
 
@@ -68,7 +66,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
-              action="https://formsubmit.co/amh6281@naver.com"
+              action="https://formsubmit.co/c9633a5575ee984c14b4e4ee4269c80e"
             >
               <input
                 className={inputStyle}

@@ -41,10 +41,11 @@ const Home = ({ setSelectedPage }: Props) => {
               </div>
             </div>
             <p className="mt-8 text-sm">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              delectus, exercitationem minima nostrum quibusdam commodi culpa
-              magni voluptas corporis adipisci! Earum tempore incidunt neque
-              molestiae reiciendis corporis, eum praesentium est.
+              골프 맛집! 쇠질 맛집! 인증샷 맛집! 운동맛집 EVOGYM이 상륙했습니다!
+              뉴텍기반의 머신, 스텝밀 보유, 러닝10대, 사이클4대 여성전용스트레칭
+              zone과 필라테스1:1 private 룸까지!! 게다가 시설 어느 곳을 가도
+              포토존이 한 가득! 이제 EVOGYM과 함께 운동도 즐기고 오운완 인증도
+              마음껏 즐겨보세요💪
             </p>
           </motion.div>
           <motion.div
